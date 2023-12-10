@@ -436,16 +436,102 @@
 
 // Looping backwards now
 
-const jonas = [
-      'Jonas',
-     'Schmedtmann',
-      1989,
-      'Teacher',
-      ['Michael', 'Peter', 'Steven'],
-];
+// const jonas = [
+//       'Jonas',
+//      'Schmedtmann',
+//       1989,
+//       'Teacher',
+//       ['Michael', 'Peter', 'Steven'],
+// ];
 
-// Not really used to much but still good to know
-for(let i = jonas.length - 1; i >= 0; i-- ){
-    console.log(jonas[i]);
+// // Not really used to much but still good to know
+// for(let i = jonas.length - 1; i >= 0; i-- ){
+//     console.log(jonas[i]);
+// }
+
+// Loop inside of a Loop
+
+// for(let coffee = 0; coffee <= 4; coffee++){
+//     console.log(`----Commencing Coffee break ${coffee}`);
+
+//     for (let cups = 0; cups <= 4; cups++){
+//         console.log(`During my break i had ${cups} cups from ${coffee} coffee pots`);
+//     }
+// };
+
+// The while Loop
+
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repitition ${rep}`);
+// }
+
+
+
+// let rep = 1;
+// while(rep <= 10){
+//     console.log(`While: Lifting weights repitition ${rep}`);
+//     rep++;
+// }
+
+// // example that does not need a counter
+
+// // roll dice until you roll a 6
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+
+// while(dice !== 6) {
+//     console.log(`you rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if(dice === 6) console.log('Loop is about to end...');
+// }
+
+
+
+
+
+
+// const calcTip = function(bill){
+//     return bill >= 50 && bill <= 300 ? bill * 0.15: bill * .20;
+// }
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// const tips = [];
+// const totals = [];
+
+// for (let i = 0; i < bills.length; i ++){
+//     const tip = calcTip(bills[i]);
+//     tips.push(tip);
+//     totals.push(tip + bills[i]);
+// }
+
+// console.log(bills, tips, totals);
+
+const calcTip = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 }
 
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for(let i = 0; i < bills.length; i++){
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+
+console.log(`The bill was ${bills}, with a tips of ${tips}, giving a grand total of ${totals}`);
+
+const calcAverage = function(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
