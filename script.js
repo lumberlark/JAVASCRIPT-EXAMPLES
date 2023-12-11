@@ -508,30 +508,61 @@
 
 // console.log(bills, tips, totals);
 
-const calcTip = function(bill){
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
-}
+// const calcTip = function(bill){
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+// }
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-const tips = [];
-const totals = [];
+// const tips = [];
+// const totals = [];
 
-for(let i = 0; i < bills.length; i++){
-    const tip = calcTip(bills[i]);
-    tips.push(tip);
-    totals.push(tip + bills[i]);
-}
+// for(let i = 0; i < bills.length; i++){
+//     const tip = calcTip(bills[i]);
+//     tips.push(tip);
+//     totals.push(tip + bills[i]);
+// }
 
-console.log(`The bill was ${bills}, with a tips of ${tips}, giving a grand total of ${totals}`);
+// console.log(`The bill was ${bills}, with a tips of ${tips}, giving a grand total of ${totals}`);
 
-const calcAverage = function(arr){
-    let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-        sum += arr[i];
-    }
-    
-    return sum / arr.length;
-}
 
-console.log(calcAverage(totals));
+// // BONUS OBJECTIVE
+// const calcAverage = function(arr){
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i];
+//     }
+//     return sum / arr.length;
+// }
+// console.log(calcAverage(totals));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Final-Boss Practice challanges again
+
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
+
+// const BMI = function(bmi){
+//     if(massMark <= massJohn){
+//         console.log(`Marks weights ${massMark}kg and is ${heightMark} m tall. John weights ${massJohn}kg and is ${heightJohn} m tall.`);
+//     }else{
+//         console.log('They weight the same');
+//     }
+// };
+
+// BMI();
+
